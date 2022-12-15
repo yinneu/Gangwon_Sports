@@ -58,8 +58,34 @@ app.get('/Schedule', function(req, res) {
     res.sendFile(__dirname + '/views/Schedule.html')
 })
 
-app.get('/test', function(req, res) {
-    res.sendFile(__dirname + '/views/test.html')
+app.get('/Support', function(req, res) {
+    res.sendFile(__dirname + '/views/Support.html')
 })
 
+app.get('/gwFC', function(req, res) {
+    res.sendFile(__dirname + '/views/gwFC.html')
+})
 
+app.get('/wjDB', function(req, res) {
+    res.sendFile(__dirname + '/views/wjDB.html')
+})
+
+app.get('/hcKSPO', function(req, res) {
+    res.sendFile(__dirname + '/views/hcKSPO.html')
+})
+
+app.get('/gnFC', function(req, res) {
+    res.sendFile(__dirname + '/views/gnFC.html')
+})
+
+app.get('/ccFC', function(req, res) {
+    res.sendFile(__dirname + '/views/ccFC.html')
+})
+
+app.get('/pcuFC', function(req, res) {
+    res.sendFile(__dirname + '/views/pcuFC.html')
+})
+
+app.get('/scHB', function(req, res) {
+    res.sendFile(__dirname + '/views/scHB.html')
+})
