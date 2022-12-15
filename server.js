@@ -35,3 +35,31 @@ app.get('/wonjuDB', function(req, res) {
 })
 
 
+////////
+
+
+app.get('/', function(req, res) {
+    res.sendFile(__dirname + '/views/main.html')
+})
+
+app.get('/Intro', function(req, res) {
+    res.sendFile(__dirname + '/views/Intro.html')
+})
+
+app.get('/Pro', function(req, res) {
+    res.sendFile(__dirname + '/views/Pro.html')
+})
+
+app.get('/Semi', function(req, res) {
+    res.sendFile(__dirname + '/views/Semi.html')
+})
+
+app.get('/Schedule', function(req, res) {
+    res.sendFile(__dirname + '/views/Schedule.html')
+})
+
+app.get('/test', function(req, res) {
+    res.sendFile(__dirname + '/views/test.html')
+})
+
+
