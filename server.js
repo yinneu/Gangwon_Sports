@@ -55,37 +55,96 @@ app.get('/Semi', function(req, res) {
 })
 
 app.get('/Schedule', function(req, res) {
-    res.sendFile(__dirname + '/views/Schedule.html')
+    db.collection('playTime').find({team: "강원FC"}).toArray(function(err, result){
+        console.log(result);
+        res.render('Schedule.ejs', {data : result})
+    })
 })
 
 app.get('/Support', function(req, res) {
     res.sendFile(__dirname + '/views/Support.html')
 })
 
+
+// 각 구단별 경기일정
+app.get('/sche-gangwon', function(req, res) {
+    db.collection('playTime').find({team: "강원FC"}).toArray(function(err, result){
+        console.log(result);
+        res.render('Schedule.ejs', {data : result})
+    })
+})
+
+app.get('/sche-wonju', function(req, res) {
+    db.collection('playTime').find({team: "원주 DB 프로미"}).toArray(function(err, result){
+        console.log(result);
+        res.render('Schedule.ejs', {data : result})
+    })
+})
+
+app.get('/sche-hwacheon', function(req, res) {
+    db.collection('playTime').find({team: "화천KSPO"}).toArray(function(err, result){
+        console.log(result);
+        res.render('Schedule.ejs', {data : result})
+    })
+})
+
+app.get('/sche-Gangneung', function(req, res) {
+    db.collection('playTime').find({team: "강릉시민축구단"}).toArray(function(err, result){
+        console.log(result);
+        res.render('Schedule.ejs', {data : result})
+    })
+})
+
+app.get('/sche-ChunCheon', function(req, res) {
+    db.collection('playTime').find({team: "춘천시민축구단"}).toArray(function(err, result){
+        console.log(result);
+        res.render('Schedule.ejs', {data : result})
+    })
+})
+
+app.get('/sche-Pyeongchang', function(req, res) {
+    db.collection('playTime').find({team: "평창유나이티드축구클럽"}).toArray(function(err, result){
+        console.log(result);
+        res.render('Schedule.ejs', {data : result})
+    })
+})
+
+app.get('/sche-Samcheok', function(req, res) {
+    db.collection('playTime').find({team: "삼척시청"}).toArray(function(err, result){
+        console.log(result);
+        res.render('Schedule.ejs', {data : result})
+    })
+})
+
+
+
+
+
+// 각 구단 응원하기 페이지
 app.get('/gwFC', function(req, res) {
-    res.sendFile(__dirname + '/views/gwFC.html')
+    res.sendFile(__dirname + '/views/comment/gwFC.html')
 })
 
 app.get('/wjDB', function(req, res) {
-    res.sendFile(__dirname + '/views/wjDB.html')
+    res.sendFile(__dirname + '/views/comment/wjDB.html')
 })
 
 app.get('/hcKSPO', function(req, res) {
-    res.sendFile(__dirname + '/views/hcKSPO.html')
+    res.sendFile(__dirname + '/views/comment/hcKSPO.html')
 })
 
 app.get('/gnFC', function(req, res) {
-    res.sendFile(__dirname + '/views/gnFC.html')
+    res.sendFile(__dirname + '/views/comment/gnFC.html')
 })
 
 app.get('/ccFC', function(req, res) {
-    res.sendFile(__dirname + '/views/ccFC.html')
+    res.sendFile(__dirname + '/views/comment/ccFC.html')
 })
 
 app.get('/pcuFC', function(req, res) {
-    res.sendFile(__dirname + '/views/pcuFC.html')
+    res.sendFile(__dirname + '/views/comment/pcuFC.html')
 })
 
 app.get('/scHB', function(req, res) {
-    res.sendFile(__dirname + '/views/scHB.html')
+    res.sendFile(__dirname + '/views/comment/scHB.html')
 })
