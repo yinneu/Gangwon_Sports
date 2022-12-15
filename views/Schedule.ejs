@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Game Schedule</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style/schedule.css">
+  </head>
+
+  <body>
+
+      <!-- 네비게이션 -->
+      <nav class="navbar navbar-expand-lg" style="background-color: #cce8fccc;">
+        <div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="/">&nbsp;강원스포츠</a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
+              <li class="nav-item" >
+                <a class="nav-link active" aria-current="page" href="Intro">소개</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/pro">프로구단</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/Semi">세미프로구단</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/Schedule">경기일정</a>
+              </li>
+               <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              우리 팀 응원하기🙌
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="/gwFC">강원FC</a></li>
+              <li><a class="dropdown-item" href="/wjDB">원주 DB 프로미</a></li>
+              <li><a class="dropdown-item" href="/hcKSPO">화천 KSPO</a></li>
+              <li><a class="dropdown-item" href="/gnFC">강릉시민축구단</a></li>
+              <li><a class="dropdown-item" href="/ccFC">춘천시민축구단</a></li>
+              <li><a class="dropdown-item" href="/pcuFC">평창 유나이티드FC</a></li>
+              <li><a class="dropdown-item" href="/scHB">삼척시청 여자 핸드볼단</a></li>
+            
+            </ul>
+          </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <br>
+
+    <div style="text-align: center;"><h1>경기 일정</h1></div><br>
+
+    <!-- 구단 카테고리 -->
+    <div class="container">
+      <button type="button" onclick="location.href='/sche-gangwon'" class="btn btn-outline-success" style="margin-left: 60px; margin-bottom: 10px; background-color: #ccfcf1cc;"><img src="https://w.namu.la/s/7f6c11e774fa5ccaa0d646edc0945615589175690564d49b92b4ab71d15718bebefc9dc8e2961f5e362d90a97b7f6097b141d9793e80ea596d23ebaf9780601bc6fd72202e60cfca358e5c9c0b518307118efbf19ef9dfd6ae8c129f4e44accb" style="width: 0.7cm; height: 0.7cm;" alt="">&nbsp;&nbsp;강원FC</button>
+      <button type="button" onclick="location.href='/sche-wonju'" class="btn btn-outline-success" style="margin-left: 10px; margin-bottom: 10px; background-color: #ccfcf1cc;"><img src="https://w.namu.la/s/0b9b5bae4a12990c8322bf9c46fa1dd5941a4b237a08b4681a967156e4eb3dc0f3ad0ced51bd69894e1732771018ada934152d2a5065e0005e68da6084e8b35eccab699be45fedd176bf67a2ae5a0eae195e759205a4838d1b3d54a2ed98f22b" style="width: 0.7cm; height: 0.7cm;" alt="">&nbsp;&nbsp;원주 DB 프로미</button>
+      <br>
+      <button type="button" onclick="location.href='/sche-hwacheon'" class="btn btn-outline-success" style="margin-left: 60px; "><img src="https://w.namu.la/s/0f4c98c3f4ccab5f382dbda677fac9ce1124656bade7cf31415c707ca198ff21596d51d0784adf6101f926aef1a970ff8384a788d91b71d6f85611c8a7130e4e1852088f599e68951e4d63f7e89c1f249b2f085d627236b22eeaea626367b85f22c935c86af66118c729d9d30e65d850" style="width: 0.7cm; height: 0.7cm;" alt="">&nbsp;&nbsp;화천 KSPO</button>
+      <button type="button" onclick="location.href='/sche-Gangneung'" class="btn btn-outline-success" style="margin-left: 10px;"><img src="https://w.namu.la/s/b2200c9fb290f6a850e404e402e2745b8005c7b8f46ccf30fbcf90bd4c467b7df2a0901066d7195892a70fd8790d5e57d42900d1cc9fd116cda78906c9f569cc9537ed5e45b43b228e3ff6d189180d7e56f4962c60185ac32eb5098ee1807b9000beea09811e2f93873e5cc9b2e0d735" style="width: 0.7cm; height: 0.7cm;" alt="">&nbsp;&nbsp;강릉시민축구단</button>
+      <button type="button" onclick="location.href='/sche-ChunCheon'" class="btn btn-outline-success" style="margin-left: 10px;"><img src="https://w.namu.la/s/0add3917802633a41d53b382eb4c8b64d10a2ec174878bb74f3e89c9c5249eaded56fd33eafdedd421c2be6945eb0f8ff061d784350aa15326cc1bd397ccb68e19c4e821886bcd355ae875487927cac104df5e9f4e9a892e6ee06568f6ff651d" style="width: 0.7cm; height: 0.7cm;" alt="">&nbsp;&nbsp;춘천시민축구단</button>
+      <button type="button" onclick="location.href='/sche-Pyeongchang'" class="btn btn-outline-success" style="margin-left: 10px;"><img src="https://w.namu.la/s/d77042c92680f2e4e93f2fd57147f667e946655456e75069086d8ceef424659a1a9d7827b5f1301984bbbf3ef5597f84fc4ad2330e3e844bfbfd386044b843ee9988268af0ac8a42a2e331b435f701e63337332dcbd0a56405a4cbd2d63c734e" style="width: 0.7cm; height: 0.7cm;" alt="">&nbsp;&nbsp;평창 유나이티드FC</button>
+      <button type="button" onclick="location.href='/sche-Samcheok'" class="btn btn-outline-success" style="margin-left: 10px;"><img src="https://w.namu.la/s/2072cca5153ca6c8547734bada629e2581c2de8afcfa2e577972b2af855fbed7f46b75220c00cc30aa975270dad29747312dc728bd32a3ab36768662398b50a5b6bd0e14e9ed2de10f5dc3481ae9cb1c5814db966e9f9c57909188a051b1ad64" style="width: 0.7cm; height: 0.7cm;" alt="">&nbsp;&nbsp;삼척시청 여자 핸드볼단</button>
+    </div>
+
+    <br>
+    <% for (var i = 0; i < data.length; i ++) { %>
+      <div class="d-flex justify-content-center">
+        <div class="card mb-3" style="text-align: center;">
+          <div class="row g-0">
+            <div class="col-md-4" style="max-width: 20%; ">
+              <!-- 경기일시 및 장소 -->
+              <div class="card-body daytime">
+                <h5 class="card-title"><%= data[i].game_year %>.<%= data[i].game_month %>.<%= data[i].game_day %> <%= data[i].game_day_of_the_week %></h5>
+                <h6 class="card-text"><%= data[i].game_time %></h6>
+                <p class="card-text"><small class="text-align"><%= data[i].place %></small></p>
+              </div>
+            </div>
+            <div class="col-md-8" style="max-width: 30%;">
+              <!-- 팀과 경기스코어 -->
+              <div class="card-body">
+                <table width="1000" height="80" style="table-layout:fixed;">
+                    <tr>
+                      <td style="word-break:break-all;">
+                        <p class="card-text"><%= data[i].team %></p>
+                      </td>
+                      <td style="word-break:break-all;">
+                        <p class="card-text score"><%= data[i].team_score %></p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="word-break:break-all;">
+                        <p class="card-text"><%= data[i].opponent %></p>
+                      </td>
+                      <td style="word-break:break-all;">
+                        <p class="card-text score"><%= data[i].opponent_score %></p>
+                      </td>
+                    </tr>
+                </table>              
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% } %>  
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  </body>
+</html>

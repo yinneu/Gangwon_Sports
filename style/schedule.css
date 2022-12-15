@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.btn-outline-success{
+
+}
+
+.daytime {
+    padding: 16px 5px;
+}
+/* table-layout:fixed; */
+
+/* td {
+    width: 20%;
+} */
+
+.col-md-4 {
+    left: 10px;
+}
