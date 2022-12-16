@@ -57,7 +57,7 @@ app.get('/Semi', function(req, res) {
 app.get('/Schedule', function(req, res) {
     db.collection('playTime').find({team: "강원FC"}).toArray(function(err, result){
         console.log(result);
-        res.render('Schedule.ejs', {data : result})
+        res.render('Schedule.ejs', {data : result, title : "⚽강원FC 경기 일정⚽"})
     })
 })
 
@@ -70,50 +70,57 @@ app.get('/Support', function(req, res) {
 app.get('/sche-gangwon', function(req, res) {
     db.collection('playTime').find({team: "강원FC"}).toArray(function(err, result){
         console.log(result);
-        res.render('Schedule.ejs', {data : result})
+        res.render('Schedule.ejs', {data : result, title : "⚽강원FC 경기 일정⚽"})
     })
+    
 })
 
 app.get('/sche-wonju', function(req, res) {
     db.collection('playTime').find({team: "원주 DB 프로미"}).toArray(function(err, result){
         console.log(result);
-        res.render('Schedule.ejs', {data : result})
+        res.render('Schedule.ejs', {data : result, title : "🏀원주 DB 프로미 경기 일정🏀"})
     })
+    
 })
 
 app.get('/sche-hwacheon', function(req, res) {
     db.collection('playTime').find({team: "화천KSPO"}).toArray(function(err, result){
         console.log(result);
-        res.render('Schedule.ejs', {data : result})
+        res.render('Schedule.ejs', {data : result, title : "⚽화천KSPO 경기 일정⚽"})
     })
+    
 })
 
 app.get('/sche-Gangneung', function(req, res) {
     db.collection('playTime').find({team: "강릉시민축구단"}).toArray(function(err, result){
         console.log(result);
-        res.render('Schedule.ejs', {data : result})
+        res.render('Schedule.ejs', {data : result, title : "⚽강릉시민축구단 경기 일정⚽"})
     })
+    
 })
 
 app.get('/sche-ChunCheon', function(req, res) {
     db.collection('playTime').find({team: "춘천시민축구단"}).toArray(function(err, result){
         console.log(result);
-        res.render('Schedule.ejs', {data : result})
+        res.render('Schedule.ejs', {data : result, title : "⚽춘천시민축구단 경기 일정⚽"})
     })
+    
 })
 
 app.get('/sche-Pyeongchang', function(req, res) {
     db.collection('playTime').find({team: "평창유나이티드축구클럽"}).toArray(function(err, result){
         console.log(result);
-        res.render('Schedule.ejs', {data : result})
+        res.render('Schedule.ejs', {data : result, title : "⚽평창 유나이티드FC 경기 일정⚽"})
     })
+    
 })
 
 app.get('/sche-Samcheok', function(req, res) {
     db.collection('playTime').find({team: "삼척시청"}).toArray(function(err, result){
         console.log(result);
-        res.render('Schedule.ejs', {data : result})
+        res.render('Schedule.ejs', {data : result, title : "🤾‍♀️삼척시청 여자 핸드볼단 경기 일정🤾‍♀️"})
     })
+    
 })
 
 
