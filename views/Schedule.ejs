@@ -72,14 +72,14 @@
     <br>
     <% for (var i = 0; i < data.length; i ++) { %>
       <div class="d-flex justify-content-center">
-        <div class="card mb-3" style="text-align: center;">
+        <div class="card mb-3" style="text-align: center; background-color: #0c283dcc;">
           <div class="row g-0">
             <div class="col-md-4" style="max-width: 50%; ">
               <!-- 경기일시 및 장소 -->
               <div class="card-body daytime">
                 <table width="500" height="80" style="table-layout: fixed;">
                   <tr>
-                    <td style="word-break: break-all;">
+                    <td style="word-break: break-all; color: white;">
                       <h5 class="card-title"><%= data[i].game_year %>.<%= data[i].game_month %>.<%= data[i].game_day %> <%= data[i].game_day_of_the_week %></h5>
                       <h6 class="card-text"><%= data[i].game_time %></h6>
                       <p class="card-text"><small class="text-align"><%= data[i].place %></small></p>
@@ -94,18 +94,18 @@
               <div class="card-body">
                 <table width="1000" height="80" style="table-layout:fixed;">
                     <tr>
-                      <td style="word-break:break-all;">
+                      <td style="word-break:break-all; color: white;">
                         <b class="card-text"><%= data[i].team %></b>
                       </td>
-                      <td style="word-break:break-all;">
+                      <td style="word-break:break-all; color: white;">
                         <b class="card-text score"><%= data[i].team_score %></b>
                       </td>
                     </tr>
                     <tr>
-                      <td style="word-break:break-all;">
+                      <td style="word-break:break-all; color: white;">
                         <p class="card-text"><%= data[i].opponent %></p>
                       </td>
-                      <td style="word-break:break-all;">
+                      <td style="word-break:break-all; color: white;">
                         <p class="card-text score"><%= data[i].opponent_score %></p>
                       </td>
                     </tr>
