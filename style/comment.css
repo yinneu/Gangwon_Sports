@@ -1,0 +1,62 @@
+/* 댓글 페이지 스타일 */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(1, 0, 24);
+}
+
+/* 팀이름 */
+.title {
+    margin-top: 50px;
+    margin-bottom: 38px;
+}
+
+/* 팀로고 */
+.title img {
+    margin-bottom: 28px;
+}
+
+/* 댓글 입력 라벨 */
+.form-label {
+    margin-top: 4px;
+}
+
+
+/* 댓글 전체  */
+.commentSection {
+    margin-bottom: 40px;
+}
+
+/* 작성된 댓글 전체 */
+.commentArea {
+    margin-top: 36px;
+}
+
+/* 댓글 */
+.comment-card {
+    margin-bottom: 12px;
+}
+
+.comment-card .card-header {
+    padding-left: 20px;
+    background-color: #cce8fccc;
+    font-weight: 600;
+}
+
+.comment-card .card-body {
+    padding-left: 20px;
+}
+
+.comment-card p {
+    font-size: 16px;
+}
+
+
+.card-body button {
+    background-color: rgb(255, 187, 84);
+    color: black;
+}

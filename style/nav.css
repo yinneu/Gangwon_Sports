@@ -1,0 +1,49 @@
+/* 네비게이션, uparrow 스타일 */
+
+/* nav {
+    margin-bottom: 10px;
+} */
+
+.navbar-expand-lg {
+    /* justify-content: space-between;    */
+    justify-content: center;
+}
+
+.navbar-collapse {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.navbar-brand {
+    margin-left: 20px;
+}
+
+.navbar-brand:hover {
+    scale: 1.2;
+    transition: all 0.5s;
+}
+
+/* .items {
+    margin-right: 24px;
+} */
+
+.nav-item {
+    margin: 0 12px;
+}
+
+.nav-item a {
+    font-weight: 700;
+}
+
+.nav-item:hover > a{
+    scale: 1.1;
+    transition: all 0.5s;
+}
+
+.dropdown {
+    z-index: 1;
+}
+
+.dropdown li> a {
+    font-weight: 300;
+}

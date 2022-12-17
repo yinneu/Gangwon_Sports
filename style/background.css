@@ -1,0 +1,58 @@
+/* 댓글 페이지를 제외한 모든 페이지 스타일*/
+
+.intro-box > h1 h2 h3 h4 h5 h6 {
+    color: rgb(22, 22, 18);
+}
+
+/* 배경 */
+body {
+    background-color: rgb(1, 0, 24);
+}
+
+
+/* 각페이지 타이틀 */
+.pageTitle {
+    margin : 155px 0px 130px;
+    font-weight: 700;
+}
+
+/* 각페이지의 콘텐츠 부분 */
+.content-box {
+    margin: 0 40px;
+    margin-bottom: 40px;
+}
+
+.pageTitle h1{
+    /* margin : 82px 0px; */
+    color: beige;
+}
+
+
+
+/* 소개페이지 */
+.intro-box {
+    background-color: #cce8fccc;
+    border-radius: 30px;
+    margin: 70px 40px;
+    margin-bottom:150px;
+    padding: 30px 24px; 
+}
+
+.intro-box .col-5 {
+    line-height: 450px;
+}
+
+.intro-box img{
+    border-radius: 5px;
+    max-height: 350px;
+    max-width: 540px;
+    top: 20px;
+    vertical-align: middle;
+}
+
+.intro-box .col-7 {
+    padding-left: 20px;
+}
+
+
+

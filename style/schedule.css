@@ -1,21 +1,35 @@
+/* 경기일정 페이지 스타일 */
+
 * {
     margin: 0;
     padding: 0;
 }
 
-.btn-outline-success{
 
+.category {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
 }
 
+
+
+
+/* 경기일시 */
 .daytime {
     padding: 16px 5px;
 }
-/* table-layout:fixed; */
 
-/* td {
-    width: 20%;
-} */
 
-.col-md-4 {
-    left: 10px;
+.linkBtn {
+
+    margin: 50px 100px 160px;
+
+}
+
+.linkBtn > button {
+    width: 100%;
+    height: 60px;
+    margin: 0 auto;
+    font-size: 21px;
 }
