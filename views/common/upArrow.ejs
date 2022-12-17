@@ -1,0 +1,39 @@
+<head>
+    <!-- 구글 폰트 아이콘 -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <style>
+        .upArrow {
+          position: fixed;
+          width: 40px;
+          height: 40px;
+          bottom: 30px;
+          right: 30px;
+          color: aliceblue;
+          background-color: orange;
+          text-align: center;
+          line-height: 40px;
+          border-radius: 50%;
+          transition: 0.4s;
+        }
+  
+        .upArrow:hover {
+          cursor: pointer;
+          bottom: 40px;
+        }
+      </style>
+</head>
+
+<body>
+    <span class="material-symbols-outlined upArrow" onclick="up()">
+      expand_less
+    </span>
+
+    <script>
+      function up(){
+        window.scrollTo(0,0);
+      }
+    </script>
+    
+</body>
+
+

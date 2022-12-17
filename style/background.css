@@ -12,18 +12,17 @@ body {
 
 /* 각페이지 타이틀 */
 .pageTitle {
-    margin : 155px 0px 130px;
+    /* margin : 155px 0px 130px;       네비고정 안했을시 */
+    margin : 240px 0px 110px;
     font-weight: 700;
 }
 
 /* 각페이지의 콘텐츠 부분 */
 .content-box {
-    margin: 0 40px;
-    margin-bottom: 40px;
+    margin: 0 60px 70px;
 }
 
 .pageTitle h1{
-    /* margin : 82px 0px; */
     color: beige;
 }
 
@@ -52,6 +51,43 @@ body {
 
 .intro-box .col-7 {
     padding-left: 20px;
+}
+
+
+/* 프로 구단 페이지 */
+/* .pro thead {
+    background-color: #1d344496;
+} */
+
+/* 표 헤더 부분 */
+.pro th {
+    text-align: center;
+}
+
+/* 표 내부 공간 */
+.pro td {
+    padding: 12px 10px;
+}
+
+/* 프로 로고 */
+.pro-logo {
+    line-height: 220px;
+}
+
+/* 설명을 제외한 콘텐츠 정렬 */
+.pro .line {
+    text-align: center;
+}
+
+/* sns 정렬 및 내부 공간 */
+.pro .sns {
+    text-align: center;
+    padding: 30px 2px;
+}
+
+/* sns 각 아이콘 */
+.sns a {
+    margin: 2px;
 }
 
 
