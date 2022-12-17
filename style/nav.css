@@ -1,12 +1,16 @@
-/* 네비게이션, uparrow 스타일 */
-
-/* nav {
-    margin-bottom: 10px;
-} */
+/* 네비게이션 */
 
 .navbar-expand-lg {
-    /* justify-content: space-between;    */
+    background-color: #cce8fc;
     justify-content: center;
+
+
+    /* 네비바 고정시 추가 */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    opacity: 1;
+    z-index: 2;
 }
 
 .navbar-collapse {
@@ -23,9 +27,6 @@
     transition: all 0.5s;
 }
 
-/* .items {
-    margin-right: 24px;
-} */
 
 .nav-item {
     margin: 0 12px;

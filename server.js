@@ -29,25 +29,32 @@ app.get('/', function(req, res) {
     res.render('Main.ejs')
 })
 
+
+// 소개 페이지
 app.get('/Intro', function(req, res) {
     res.render('Intro.ejs')
 })
 
+
+// 프로 페이지
 app.get('/Pro', function(req, res) {
     res.render('Pro.ejs')
 })
 
+
+// 세미프로 페이지
 app.get('/Semi', function(req, res) {
     res.render('Semi.ejs')
 })
 
+
+// 경기일정 페이지
 app.get('/Schedule', function(req, res) {
     db.collection('playTime').find({team: "강원FC"}).toArray(function(err, result){
         console.log(result);
-        res.render('Schedule.ejs', {data : result, title : "⚽강원FC 경기 일정⚽"})
+        res.render('Schedule.ejs', {data : result, title : "⚽강원FC 경기 일정⚽", sche_link: 'https://gangwon-fc.com/match/schedule' })
     })
 })
-
 
 
 
@@ -55,15 +62,14 @@ app.get('/Schedule', function(req, res) {
 app.get('/sche-gangwon', function(req, res) {
     db.collection('playTime').find({team: "강원FC"}).toArray(function(err, result){
         console.log(result);
-        res.render('Schedule.ejs', {data : result, title : "⚽강원FC 경기 일정⚽"})
+        res.render('Schedule.ejs', {data : result, title : "⚽강원FC 경기 일정⚽", sche_link: 'https://gangwon-fc.com/match/schedule' })
     })
-    
 })
 
 app.get('/sche-wonju', function(req, res) {
     db.collection('playTime').find({team: "원주 DB 프로미"}).toArray(function(err, result){
         console.log(result);
-        res.render('Schedule.ejs', {data : result, title : "🏀원주 DB 프로미 경기 일정🏀"})
+        res.render('Schedule.ejs', {data : result, title : "🏀원주 DB 프로미 경기 일정🏀", sche_link: 'https://promy.kbl.or.kr/game/schedule-list' })
     })
     
 })
@@ -71,7 +77,7 @@ app.get('/sche-wonju', function(req, res) {
 app.get('/sche-hwacheon', function(req, res) {
     db.collection('playTime').find({team: "화천KSPO"}).toArray(function(err, result){
         console.log(result);
-        res.render('Schedule.ejs', {data : result, title : "⚽화천KSPO 경기 일정⚽"})
+        res.render('Schedule.ejs', {data : result, title : "⚽화천KSPO 경기 일정⚽", sche_link: 'https://www.kwff.or.kr/match' })
     })
     
 })
@@ -79,7 +85,7 @@ app.get('/sche-hwacheon', function(req, res) {
 app.get('/sche-Gangneung', function(req, res) {
     db.collection('playTime').find({team: "강릉시민축구단"}).toArray(function(err, result){
         console.log(result);
-        res.render('Schedule.ejs', {data : result, title : "⚽강릉시민축구단 경기 일정⚽"})
+        res.render('Schedule.ejs', {data : result, title : "⚽강릉시민축구단 경기 일정⚽", sche_link: 'http://www.gncityfc.com/sub/sub3/sub1.html' })
     })
     
 })
@@ -87,7 +93,7 @@ app.get('/sche-Gangneung', function(req, res) {
 app.get('/sche-ChunCheon', function(req, res) {
     db.collection('playTime').find({team: "춘천시민축구단"}).toArray(function(err, result){
         console.log(result);
-        res.render('Schedule.ejs', {data : result, title : "⚽춘천시민축구단 경기 일정⚽"})
+        res.render('Schedule.ejs', {data : result, title : "⚽춘천시민축구단 경기 일정⚽", sche_link: 'http://cccitizenfc.co.kr/front/portal/sub04_01_01' })
     })
     
 })
@@ -95,7 +101,7 @@ app.get('/sche-ChunCheon', function(req, res) {
 app.get('/sche-Pyeongchang', function(req, res) {
     db.collection('playTime').find({team: "평창유나이티드축구클럽"}).toArray(function(err, result){
         console.log(result);
-        res.render('Schedule.ejs', {data : result, title : "⚽평창 유나이티드FC 경기 일정⚽"})
+        res.render('Schedule.ejs', {data : result, title : "⚽평창 유나이티드FC 경기 일정⚽", sche_link: 'http://www.pcutdfc.com/contents.do?cid=93c5ea5facd340b8a1662171111da225' })
     })
     
 })
@@ -103,7 +109,7 @@ app.get('/sche-Pyeongchang', function(req, res) {
 app.get('/sche-Samcheok', function(req, res) {
     db.collection('playTime').find({team: "삼척시청"}).toArray(function(err, result){
         console.log(result);
-        res.render('Schedule.ejs', {data : result, title : "🤾‍♀️삼척시청 여자 핸드볼단 경기 일정🤾‍♀️"})
+        res.render('Schedule.ejs', {data : result, title : "🤾‍♀️삼척시청 여자 핸드볼단 경기 일정🤾‍♀️", sche_link: 'http://league.pndcom.com/game/schedule_list.php' })
     })
     
 })

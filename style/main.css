@@ -1,11 +1,11 @@
 /* 메인 페이지 스타일 */
 
 .slide{
-    height: 90vh;
+    height: 100vh;
 }
 
 .carousel-inner{
-    height: 90vh;
+    height: 100vh;
 }
 
 .carousel-item{
@@ -20,7 +20,6 @@ img {
     height: 100%;
     width: 100%;
     bottom: 0px;
-
 }
 
 

@@ -9,10 +9,13 @@
 .category {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 16px;
+    margin: auto;
+    margin-bottom: 22px;
 }
 
-
+.category button {
+    margin: 3px 5px;
+}
 
 
 /* 경기일시 */
@@ -21,6 +24,7 @@
 }
 
 
+/* 경기일정 더보기 버튼 */
 .linkBtn {
 
     margin: 50px 100px 160px;
