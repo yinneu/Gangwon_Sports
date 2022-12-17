@@ -23,35 +23,22 @@ MongoClient.connect("mongodb+srv://Yerim:rkskek204!@cluster0.et8woqo.mongodb.net
 })
 
 
-app.get('/game', function(req, res) {
-    db.collection('comment').find().toArray(function(err, result){
-      console.log(result);
-      res.render('game.ejs', {gameinfo : result})
-    })
-})
-
-app.get('/wonjuDB', function(req, res) {
-    res.render('wonjuDB.ejs');
-})
-
-
-////////
 
 
 app.get('/', function(req, res) {
-    res.sendFile(__dirname + '/views/main.html')
+    res.render('Main.ejs')
 })
 
 app.get('/Intro', function(req, res) {
-    res.sendFile(__dirname + '/views/Intro.html')
+    res.render('Intro.ejs')
 })
 
 app.get('/Pro', function(req, res) {
-    res.sendFile(__dirname + '/views/Pro.html')
+    res.render('Pro.ejs')
 })
 
 app.get('/Semi', function(req, res) {
-    res.sendFile(__dirname + '/views/Semi.html')
+    res.render('Semi.ejs')
 })
 
 app.get('/Schedule', function(req, res) {
@@ -61,9 +48,7 @@ app.get('/Schedule', function(req, res) {
     })
 })
 
-app.get('/Support', function(req, res) {
-    res.sendFile(__dirname + '/views/Support.html')
-})
+
 
 
 // 각 구단별 경기일정
@@ -124,34 +109,68 @@ app.get('/sche-Samcheok', function(req, res) {
 })
 
 
+//댓글 작성하기
+app.post('/add', function(req, res){
 
+    db.collection('config').findOne({name : 'commentcount'}, function(err, result){
+        var totalCnt = result;
+        db.collection('comment').insertOne( { team: req.body.team, comment : req.body.comment, author : req.body.author } , function(){
+          db.collection('config').updateOne({name:'commentcount'},{ $inc: {count:1} },function(err, result){
+            if (err) return console.log(err)
+            console.log('save complete')
+            res.redirect(req.body.link)
+          });  
+        });
+    });
+});
 
 
 // 각 구단 응원하기 페이지
 app.get('/gwFC', function(req, res) {
-    res.sendFile(__dirname + '/views/comment/gwFC.html')
+    db.collection('comment').find( { team : "강원FC" }).toArray(function(err, result){
+        console.log(result);
+        res.render('gwFC.ejs', {commentInfo : result})
+    })
 })
 
 app.get('/wjDB', function(req, res) {
-    res.sendFile(__dirname + '/views/comment/wjDB.html')
+    db.collection('comment').find( { team : "원주 DB 프로미" }).toArray(function(err, result){
+        console.log(result);
+        res.render('wjDB.ejs', {commentInfo : result})
+    })
 })
 
 app.get('/hcKSPO', function(req, res) {
-    res.sendFile(__dirname + '/views/comment/hcKSPO.html')
+    db.collection('comment').find( { team : "화천 KSPO" }).toArray(function(err, result){
+        console.log(result);
+        res.render('hcKSPO.ejs', {commentInfo : result})
+    })
 })
 
 app.get('/gnFC', function(req, res) {
-    res.sendFile(__dirname + '/views/comment/gnFC.html')
+    db.collection('comment').find( { team : "강릉시민축구단" }).toArray(function(err, result){
+        console.log(result);
+        res.render('gnFC.ejs', {commentInfo : result})
+    })
 })
 
 app.get('/ccFC', function(req, res) {
-    res.sendFile(__dirname + '/views/comment/ccFC.html')
+    db.collection('comment').find( { team : "춘천시민축구단" }).toArray(function(err, result){
+        console.log(result);
+        res.render('ccFC.ejs', {commentInfo : result})
+    })
 })
 
-app.get('/pcuFC', function(req, res) {
-    res.sendFile(__dirname + '/views/comment/pcuFC.html')
+app.get('/pcuFC', function(req, res) {;
+    db.collection('comment').find( { team : "평창 유나이티드FC" }).toArray(function(err, result){
+        console.log(result);
+        res.render('pcuFC.ejs', {commentInfo : result})
+    })
 })
 
 app.get('/scHB', function(req, res) {
-    res.sendFile(__dirname + '/views/comment/scHB.html')
+    db.collection('comment').find( { team : "삼척시청" }).toArray(function(err, result){
+        console.log(result);
+        res.render('scHB.ejs', {commentInfo : result})
+    })
 })

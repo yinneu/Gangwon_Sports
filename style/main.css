@@ -1,0 +1,29 @@
+/* 메인 페이지 스타일 */
+
+.slide{
+    height: 90vh;
+}
+
+.carousel-inner{
+    height: 90vh;
+}
+
+.carousel-item{
+    overflow: hidden;
+    bottom: 0px;
+    max-height: 100%;
+}
+
+
+img {
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    bottom: 0px;
+
+}
+
+
+.carousel-caption h5{
+    color: white;
+}
