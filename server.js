@@ -117,17 +117,11 @@ app.get('/sche-Samcheok', function(req, res) {
 
 //댓글 작성하기
 app.post('/add', function(req, res){
-
-    db.collection('config').findOne({name : 'commentcount'}, function(err, result){
-        var totalCnt = result;
-        db.collection('comment').insertOne( { team: req.body.team, comment : req.body.comment, author : req.body.author } , function(){
-          db.collection('config').updateOne({name:'commentcount'},{ $inc: {count:1} },function(err, result){
-            if (err) return console.log(err)
-            console.log('save complete')
-            res.redirect(req.body.link)
-          });  
-        });
-    });
+    db.collection('comment').insertOne( { team: req.body.team, comment : req.body.comment, author : req.body.author } , function(err, result){
+        if (err) return console.log(err)
+        console.log('save complete')
+        res.redirect(req.body.link)
+    });  
 });
 
 
