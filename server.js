@@ -1,6 +1,7 @@
 /////////
 // nodejs, nodemon, express, ejs, body-parser, mongodb : 설치해야하는것들
 /////////
+
 const express = require('express');
 const app = express();
 app.use(express.urlencoded({extended: true}))
@@ -21,8 +22,6 @@ MongoClient.connect("mongodb+srv://Yerim:rkskek204!@cluster0.et8woqo.mongodb.net
         console.log('listening on 8080');
     })
 })
-
-
 
 
 app.get('/', function(req, res) {
